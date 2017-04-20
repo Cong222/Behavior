@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		F436F4A51E8C9494001D2C8B /* MotionInformationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F436F4A21E8C9494001D2C8B /* MotionInformationViewController.m */; };
 		F436F4A61E8C9494001D2C8B /* MotionJudgementViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F436F4A41E8C9494001D2C8B /* MotionJudgementViewController.m */; };
+		F44007771EA83FFC0006F998 /* MotionNowJudgementViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F44007761EA83FFC0006F998 /* MotionNowJudgementViewController.m */; };
 		F496BC9C1E8C9DAE00C461C0 /* MotionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F496BC9B1E8C9DAE00C461C0 /* MotionManager.m */; };
 		F4C571F11E791A500058439A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C571F01E791A500058439A /* main.m */; };
 		F4C571F41E791A500058439A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C571F31E791A500058439A /* AppDelegate.m */; };
@@ -22,6 +23,8 @@
 		F436F4A21E8C9494001D2C8B /* MotionInformationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MotionInformationViewController.m; path = Controllers/MotionInformationViewController.m; sourceTree = "<group>"; };
 		F436F4A31E8C9494001D2C8B /* MotionJudgementViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MotionJudgementViewController.h; path = Controllers/MotionJudgementViewController.h; sourceTree = "<group>"; };
 		F436F4A41E8C9494001D2C8B /* MotionJudgementViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MotionJudgementViewController.m; path = Controllers/MotionJudgementViewController.m; sourceTree = "<group>"; };
+		F44007751EA83FFC0006F998 /* MotionNowJudgementViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MotionNowJudgementViewController.h; path = Controllers/MotionNowJudgementViewController.h; sourceTree = "<group>"; };
+		F44007761EA83FFC0006F998 /* MotionNowJudgementViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MotionNowJudgementViewController.m; path = Controllers/MotionNowJudgementViewController.m; sourceTree = "<group>"; };
 		F496BC9A1E8C9DAE00C461C0 /* MotionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MotionManager.h; path = Models/MotionManager.h; sourceTree = "<group>"; };
 		F496BC9B1E8C9DAE00C461C0 /* MotionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MotionManager.m; path = Models/MotionManager.m; sourceTree = "<group>"; };
 		F496BCA41E8CACBA00C461C0 /* MotionType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MotionType.h; path = Models/MotionType.h; sourceTree = "<group>"; };
@@ -53,6 +56,8 @@
 				F436F4A21E8C9494001D2C8B /* MotionInformationViewController.m */,
 				F436F4A31E8C9494001D2C8B /* MotionJudgementViewController.h */,
 				F436F4A41E8C9494001D2C8B /* MotionJudgementViewController.m */,
+				F44007751EA83FFC0006F998 /* MotionNowJudgementViewController.h */,
+				F44007761EA83FFC0006F998 /* MotionNowJudgementViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -184,6 +189,7 @@
 				F496BC9C1E8C9DAE00C461C0 /* MotionManager.m in Sources */,
 				F436F4A61E8C9494001D2C8B /* MotionJudgementViewController.m in Sources */,
 				F4C571F11E791A500058439A /* main.m in Sources */,
+				F44007771EA83FFC0006F998 /* MotionNowJudgementViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

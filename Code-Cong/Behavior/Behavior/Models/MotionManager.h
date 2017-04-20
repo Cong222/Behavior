@@ -16,7 +16,9 @@
 
 + (instancetype)sharedInstance;
 
-- (MotionType)judgeMotionForNow;
+- (MotionType)judgeMotionForNow; // 判断当前动作
+
+- (MotionType)judgeMotionForPeriod; // 判断一段时间的动作
 
 - (void)startToJudgeWithInterval:(NSTimeInterval)timeInterval;
 

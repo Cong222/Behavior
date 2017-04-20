@@ -15,6 +15,8 @@ typedef NS_ENUM (uint32_t, MotionType){
     runState,
     phoneUpState,   // 手机拿起
     phoneDownState, // 手机放下
+    driveState,  //驾驶模式
+    
 };
 
 #endif /* MotionType_h */

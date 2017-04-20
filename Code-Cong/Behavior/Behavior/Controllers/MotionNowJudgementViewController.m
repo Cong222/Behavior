@@ -6,10 +6,10 @@
 //  Copyright © 2017年 Cong. All rights reserved.
 //
 
-#import "MotionJudgementViewController.h"
+#import "MotionNowJudgementViewController.h"
 #import "MotionManager.h"
 
-@interface MotionJudgementViewController ()
+@interface MotionNowJudgementViewController ()
 
 @property (nonatomic, strong) MotionManager *motionManager;
 @property (weak, nonatomic) IBOutlet UILabel *motionStateLabel; //当前动作
@@ -20,7 +20,7 @@
 
 @end
 
-@implementation MotionJudgementViewController
+@implementation MotionNowJudgementViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -53,7 +53,7 @@
                                               "Gravity y: %+.2f\t\tUser y: %+.2f\n"
                                               "Gravity z: %+.2f\t\tUser z: %+.2f\n",gravity.x,userAcc.x,gravity.y,userAcc.y,gravity.z,userAcc.z];
     
-    int type = [self.motionManager judgeMotionForPeriod];
+    int type = [self.motionManager judgeMotionForNow];
     switch (type) {
         case phoneUpState:
             self.motionStateLabel.text = @"你可能拿起了手机";

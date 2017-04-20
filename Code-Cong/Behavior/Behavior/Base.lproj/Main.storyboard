@@ -23,26 +23,35 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BJc-WG-OfZ">
-                                <rect key="frame" x="156" y="318" width="62" height="30"/>
-                                <state key="normal" title="行为判断"/>
+                                <rect key="frame" x="141" y="247" width="92" height="30"/>
+                                <state key="normal" title="长时行为判断"/>
                                 <connections>
                                     <segue destination="58G-ce-Nh7" kind="show" id="Ewc-hW-Ogw"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5bU-Y3-FrW">
-                                <rect key="frame" x="156" y="447" width="62" height="30"/>
+                                <rect key="frame" x="156" y="447.5" width="62" height="30"/>
                                 <state key="normal" title="瞬时信息"/>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="show" id="cYv-hH-vpv"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J8W-TJ-3Sc">
+                                <rect key="frame" x="141" y="335" width="92" height="30"/>
+                                <state key="normal" title="瞬时行为判断"/>
+                                <connections>
+                                    <segue destination="gd4-6G-HwY" kind="show" id="gxZ-Oz-BqH"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="5bU-Y3-FrW" firstAttribute="top" secondItem="BJc-WG-OfZ" secondAttribute="bottom" constant="99" id="9aA-rc-wgI"/>
+                            <constraint firstItem="5bU-Y3-FrW" firstAttribute="top" secondItem="BJc-WG-OfZ" secondAttribute="bottom" constant="170.5" id="9aA-rc-wgI"/>
                             <constraint firstItem="BJc-WG-OfZ" firstAttribute="centerX" secondItem="3Nk-Wh-mfe" secondAttribute="centerX" id="Qba-Oi-0Nd"/>
+                            <constraint firstItem="twU-fm-Ggo" firstAttribute="top" secondItem="J8W-TJ-3Sc" secondAttribute="bottom" constant="302" id="og8-ld-Qyy"/>
+                            <constraint firstItem="J8W-TJ-3Sc" firstAttribute="leading" secondItem="BJc-WG-OfZ" secondAttribute="trailing" constant="-92" id="rg2-zy-fbD"/>
                             <constraint firstItem="5bU-Y3-FrW" firstAttribute="centerX" secondItem="3Nk-Wh-mfe" secondAttribute="centerX" id="uWP-XP-hzo"/>
-                            <constraint firstItem="BJc-WG-OfZ" firstAttribute="centerY" secondItem="3Nk-Wh-mfe" secondAttribute="centerY" id="wjo-Wx-AgE"/>
+                            <constraint firstItem="BJc-WG-OfZ" firstAttribute="centerY" secondItem="3Nk-Wh-mfe" secondAttribute="centerY" constant="-71.5" id="wjo-Wx-AgE"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="miL-aA-yEg"/>
@@ -109,7 +118,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Z9-0P-sKZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1152.8" y="-149.77511244377811"/>
+            <point key="canvasLocation" x="1153" y="-173"/>
         </scene>
         <!--Motion Information View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -185,6 +194,66 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QzM-AT-bJd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-674.39999999999998" y="114.69265367316342"/>
+        </scene>
+        <!--Motion Now Judgement View Controller-->
+        <scene sceneID="M4i-Lk-LcP">
+            <objects>
+                <viewController id="gd4-6G-HwY" customClass="MotionNowJudgementViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="x7s-cw-vhY"/>
+                        <viewControllerLayoutGuide type="bottom" id="L0c-UQ-Ofm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qrP-Xf-2Uy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jPo-1x-XnQ">
+                                <rect key="frame" x="0.0" y="64" width="375" height="97"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="97" id="SCf-4t-wkW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pkQ-Hy-YGb">
+                                <rect key="frame" x="0.0" y="258.5" width="375" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="1ec-Ht-9EC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N5F-UD-h5X">
+                                <rect key="frame" x="156" y="486" width="62" height="30"/>
+                                <state key="normal" title="点击开始"/>
+                                <connections>
+                                    <action selector="judgingIfStart:" destination="gd4-6G-HwY" eventType="touchUpInside" id="EJf-T2-9q7"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="jPo-1x-XnQ" firstAttribute="top" secondItem="x7s-cw-vhY" secondAttribute="bottom" id="5Or-jo-26p"/>
+                            <constraint firstItem="pkQ-Hy-YGb" firstAttribute="width" secondItem="qrP-Xf-2Uy" secondAttribute="width" id="7TZ-Jr-V15"/>
+                            <constraint firstItem="L0c-UQ-Ofm" firstAttribute="top" secondItem="N5F-UD-h5X" secondAttribute="bottom" constant="151" id="BuV-Zp-TkU"/>
+                            <constraint firstItem="pkQ-Hy-YGb" firstAttribute="centerX" secondItem="qrP-Xf-2Uy" secondAttribute="centerX" id="PIw-PU-qnq"/>
+                            <constraint firstItem="jPo-1x-XnQ" firstAttribute="width" secondItem="qrP-Xf-2Uy" secondAttribute="width" id="bf0-bY-xQz"/>
+                            <constraint firstItem="jPo-1x-XnQ" firstAttribute="centerX" secondItem="qrP-Xf-2Uy" secondAttribute="centerX" id="hzZ-vk-gFG"/>
+                            <constraint firstItem="pkQ-Hy-YGb" firstAttribute="centerY" secondItem="qrP-Xf-2Uy" secondAttribute="centerY" id="r9A-R3-AEj"/>
+                            <constraint firstItem="N5F-UD-h5X" firstAttribute="centerX" secondItem="qrP-Xf-2Uy" secondAttribute="centerX" id="sJu-eX-b4D"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="deviceMotionInformationLabel" destination="pkQ-Hy-YGb" id="LWr-86-EdX"/>
+                        <outlet property="motionStateLabel" destination="jPo-1x-XnQ" id="9Ih-Ba-44J"/>
+                        <outlet property="startButton" destination="N5F-UD-h5X" id="V7X-h2-qfL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rJG-uf-458" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1814" y="-173"/>
         </scene>
     </scenes>
 </document>
