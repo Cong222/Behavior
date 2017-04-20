@@ -69,11 +69,11 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    if (indexPath.row == 0) {
+    if (indexPath.row == 1) {
         UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Motion" bundle:nil];
         UIViewController *vc = [sb instantiateViewControllerWithIdentifier:@"MotionJudgementViewController"];
         [self.navigationController pushViewController:vc animated:YES];
-    }else if (indexPath.row == 1){
+    }else if (indexPath.row == 0){
         UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Motion" bundle:nil];
         UIViewController *vc = [sb instantiateViewControllerWithIdentifier:@"MotionInformationViewController"];
         [self.navigationController pushViewController:vc animated:YES];
