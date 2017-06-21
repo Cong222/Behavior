@@ -1,0 +1,109 @@
+//
+//  MotionDetectionViewController.m
+//  MotionDetection
+//
+// The MIT License (MIT)
+//
+// Created by : arturdev
+// Copyright (c) 2014 SocialObjects Software. All rights reserved.
+//
+// Permission is hereby granted, free of charge, to any person obtaining a copy of
+// this software and associated documentation files (the "Software"), to deal in
+// the Software without restriction, including without limitation the rights to
+// use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+// the Software, and to permit persons to whom the Software is furnished to do so,
+// subject to the following conditions:
+//
+// The above copyright notice and this permission notice shall be included in all
+// copies or substantial portions of the Software.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+// FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+// COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+// IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+// CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE
+
+#import "MotionDetectionViewController.h"
+#import "SOMotionDetector.h"
+#import "SOStepDetector.h"
+
+@interface MotionDetectionViewController ()
+{
+    int stepCount;
+}
+@property (weak, nonatomic) IBOutlet UILabel *speedLabel;
+@property (weak, nonatomic) IBOutlet UILabel *stepCountLabel;
+@property (weak, nonatomic) IBOutlet UILabel *motionTypeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *isShakingLabel;
+
+@end
+
+@implementation MotionDetectionViewController
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+
+    __weak MotionDetectionViewController *weakSelf = self;
+    [SOMotionDetector sharedInstance].motionTypeChangedBlock = ^(SOMotionType motionType) {
+        NSString *type = @"";
+        switch (motionType) {
+            case MotionTypeNotMoving:
+                type = @"静止中..";
+                break;
+            case MotionTypeWalking:
+                type = @"正在行走..";
+                break;
+            case MotionTypeRunning:
+                type = @"正在奔跑..";
+                break;
+            case MotionTypeAutomotive:
+                type = @"正在开车..";
+                break;
+        }
+        
+        weakSelf.motionTypeLabel.text = type;
+    };
+    
+    [SOMotionDetector sharedInstance].locationChangedBlock = ^(CLLocation *location) {
+        weakSelf.speedLabel.text = [NSString stringWithFormat:@"%.2f m/s",[SOMotionDetector sharedInstance].currentSpeed * 3.6f * 1000 / 3600];
+        NSLog(@"speed:%f", [SOMotionDetector sharedInstance].currentSpeed);
+    };
+    
+    [SOMotionDetector sharedInstance].accelerationChangedBlock = ^(CMAcceleration acceleration) {
+        BOOL isShaking = [SOMotionDetector sharedInstance].isShaking;
+        weakSelf.isShakingLabel.text = isShaking ? @"摇晃手机":@"手机未摇晃";
+    };
+    
+    if (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"7.0")) {
+        [SOMotionDetector sharedInstance].useM7IfAvailable = YES; //Use M7 chip if available, otherwise use lib's algorithm
+    }
+    
+    //This is required for iOS > 9.0 if you want to receive location updates in the background
+    [SOLocationManager sharedInstance].allowsBackgroundLocationUpdates = YES;
+    
+    //Starting motion detector
+    [[SOMotionDetector sharedInstance] startDetection];
+    
+    //Starting pedometer
+    [[SOStepDetector sharedInstance] startDetectionWithUpdateBlock:^(NSError *error) {
+        if (error) {
+            NSLog(@"%@", error.localizedDescription);
+            return;
+        }
+        
+        stepCount++;
+        self.stepCountLabel.text = [NSString stringWithFormat:@"行走步数: %d", stepCount];
+    }];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+}
+
+@end

@@ -1,0 +1,28 @@
+//
+//  Behaviour-Prefix.pch
+//  Behavior_iOS
+//
+//  Created by Calvix on 2017/6/20.
+//  Copyright © 2017年 Calvix. All rights reserved.
+//
+
+#ifndef Behaviour_Prefix_pch
+#define Behaviour_Prefix_pch
+
+#import <Availability.h>
+
+#ifndef __IPHONE_5_0
+#warning "This project uses features only available in iOS SDK 5.0 and later."
+#endif
+
+#define SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(v)  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedAscending)
+
+
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#endif
+
+static NSString *USERNAMEKEY = @"userNameKey";
+
+#endif /* Behaviour_Prefix_pch */
