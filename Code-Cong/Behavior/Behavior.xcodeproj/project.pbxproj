@@ -143,7 +143,7 @@
 				TargetAttributes = {
 					F4C571EB1E791A500058439A = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = M47PJ53QYJ;
+						DevelopmentTeam = P5643GJ6RQ;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -309,10 +309,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = M47PJ53QYJ;
+				DEVELOPMENT_TEAM = P5643GJ6RQ;
 				INFOPLIST_FILE = "$(SRCROOT)/Behavior/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Cong.-0-3-Behavior";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Cong2.-0-3-Behavior";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -321,10 +321,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = M47PJ53QYJ;
+				DEVELOPMENT_TEAM = P5643GJ6RQ;
 				INFOPLIST_FILE = "$(SRCROOT)/Behavior/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Cong.-0-3-Behavior";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Cong2.-0-3-Behavior";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
