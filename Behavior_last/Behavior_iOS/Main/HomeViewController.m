@@ -64,7 +64,7 @@ static NSString *kCellId = @"cellId";
 
 - (void)checkIfPerfectUserInfo {
     NSString *name = [[NSUserDefaults standardUserDefaults] objectForKey:USERNAMEKEY];
-    if (!name || ![name isEqualToString:@""]) {
+    if (name && ![name isEqualToString:@""]) {
         return;
     }
     FCAlertView *alert = [[FCAlertView alloc] init];

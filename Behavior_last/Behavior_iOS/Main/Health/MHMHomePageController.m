@@ -56,6 +56,11 @@ static NSString *kMHMNormalCellIdentifier = @"MHMNormalCellIdentifier";
     //子类中调用[super viewDidLoad]时会自动调用这三个方法
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+//    [self updateTodayChartData];
+}
+
 - (void)setupView {
     [self.view addSubview:self.scrollView];
     
