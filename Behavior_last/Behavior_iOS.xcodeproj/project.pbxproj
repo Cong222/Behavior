@@ -1049,6 +1049,7 @@
 				DEVELOPMENT_TEAM = P5643GJ6RQ;
 				GCC_PREFIX_HEADER = "Behavior_iOS/Behaviour-Prefix.pch";
 				INFOPLIST_FILE = "Behavior_iOS/Behavior-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "cn.edu.scnu.co.Behavior-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1064,6 +1065,7 @@
 				DEVELOPMENT_TEAM = P5643GJ6RQ;
 				GCC_PREFIX_HEADER = "Behavior_iOS/Behaviour-Prefix.pch";
 				INFOPLIST_FILE = "Behavior_iOS/Behavior-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "cn.edu.scnu.co.Behavior-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
